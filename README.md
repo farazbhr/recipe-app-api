@@ -18,3 +18,12 @@ docker-compose run --rm app sh -c "python manage.py test"
 ```bash
 docker-compose run --rm app sh -c "python manage.py startapp core"
 ```
+
+### Check the availibility of the database :
+```bash
+docker-compose run --rm app sh -c "python manage.py wait_for_db"
+```
+### Check the test and linting :
+```bash
+docker-compose run --rm app sh -c "python manage.py test && flake8"
+```
