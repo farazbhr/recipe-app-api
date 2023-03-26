@@ -1,5 +1,5 @@
 # recipe-app-api
-Recipe API Project 
+Recipe API Project
 
 ### Run linting command :
 ```bash
@@ -27,3 +27,13 @@ docker-compose run --rm app sh -c "python manage.py wait_for_db"
 ```bash
 docker-compose run --rm app sh -c "python manage.py test && flake8"
 ```
+
+### make migrations file :
+```bash
+docker-compose run --rm app sh -c "python manage.py makemigrations"
+```
+### apply migrations :
+```bash
+docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"
+```
+
