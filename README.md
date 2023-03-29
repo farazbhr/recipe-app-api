@@ -36,4 +36,10 @@ docker-compose run --rm app sh -c "python manage.py makemigrations"
 ```bash
 docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"
 ```
+### create superuser :
+```bash
+docker-compose run --rm app sh -c "python manage.py createsuperuser"
+```
+
+
 
